@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Przykładowa Strona</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Nawigator -->
+    <nav class="navbar">
+      <ul>
+        <li><a href="#banner">Banner</a></li>
+        <li><a href="#section1">Sekcja 1</a></li>
+        <li><a href="#section2">Sekcja 2</a></li>
+        <li><a href="#section3">Sekcja 3</a></li>
+      </ul>
+    </nav>
+
+    <!-- Banner -->
+    <div id="banner" class="banner">
+      <div class="banner-images">
+        <img src="piesek1.jpg" alt="Zdjęcie 1" />
+        <img src="kotek1.jpg" alt="Zdjęcie 2" />
+        <img src="piesek2.jpg" alt="Zdjęcie 3" />
+      </div>
+    </div>
+
+    <!-- Sekcja 1 -->
+    <section id="section1" class="section">
+      <h2>Sekcja 1</h2>
+      <p>
+        To jest przykładowy opis w pierwszej sekcji. Tekst w tej sekcji jest
+        skalowalny w zależności od jego ilości.
+      </p>
+    </section>
+
+    <!-- Sekcja 2 -->
+    <section id="section2" class="section">
+      <h2>Sekcja 2</h2>
+      <div class="gallery">
+        <div class="profile">
+          <img src="profile1.jpg" alt="Profil 1" class="profile-image" />
+          <div class="description">
+            <p>Jan Kowalski</p>
+            <p>Projektant graficzny</p>
+          </div>
+        </div>
+        <div class="profile reverse">
+          <div class="description">
+            <p>Anna Nowak</p>
+            <p>Inżynier oprogramowania</p>
+          </div>
+          <img src="profile2.jpg" alt="Profil 2" class="profile-image" />
+        </div>
+        <div class="profile">
+          <img src="profile3.jpg" alt="Profil 3" class="profile-image" />
+          <div class="description">
+            <p>Paweł Wiśniewski</p>
+            <p>Specjalista ds. marketingu</p>
+          </div>
+        </div>
+        <!-- Dodaj więcej zdjęć i podpisów tutaj -->
+      </div>
+    </section>
+
+    <!-- Sekcja 3 -->
+    <section id="section3" class="section">
+      <h2>Sekcja 3</h2>
+      <div class="tiles">
+        <div class="tile">
+          <p>2024-11-17</p>
+          <p>Opis wydarzenia 1</p>
+        </div>
+        <div class="tile">
+          <p>2024-12-01</p>
+          <p>Opis wydarzenia 2</p>
+        </div>
+        <!-- Dodaj więcej kafelków tutaj -->
+      </div>
+    </section>
+
+    <!-- Stopka -->
+    <footer class="footer">
+      <p>&copy; 2024 Moja Strona</p>
+    </footer>
+  </body>
+</html>
