@@ -9,6 +9,11 @@
   <body>
     <!-- Nawigator -->
     <nav class="navbar">
+      <div class="burger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
       <ul>
         <li><a href="#banner">Banner</a></li>
         <li><a href="#section1">Opis projektu</a></li>
@@ -151,11 +156,11 @@
         </div>
         <div class="tile">
           <p>2024-11-18</p>
-          <p>???</p>
+          <p>Organiazacja pracy na ten tydzień</p>
         </div>
         <div class="tile">
-          <p>2024-11-18</p>
-          <p>???</p>
+          <p>2024-11-27</p>
+          <p>spotkanie stacjnarne omówienie koncepcji na aplikacje</p>
         </div>
       </div>
       
@@ -168,5 +173,14 @@
     <footer class="footer">
       <p>&copy; 2024 Programowanie zespołowe - Zespół nr. 9</p>
     </footer>
+    <script>
+      const burger = document.querySelector('.burger');
+      const navbarMenu = document.querySelector('.navbar ul');
+    
+      burger.addEventListener('click', () => {
+        navbarMenu.classList.toggle('active'); // Pokazuje lub ukrywa menu
+        burger.classList.toggle('toggle');    // Dodaje animację do burgera
+      });
+    </script>
   </body>
 </html>
