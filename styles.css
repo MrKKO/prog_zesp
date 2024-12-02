@@ -102,8 +102,16 @@ body {
   border-radius: 20px;
   padding: 5px;
   margin: 10px;
+  
 }
-@keyframes scroll-banner {
+.banner .scroll {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: max-content;
+  animation: loop 15s linear infinite;
+}
+@keyframes loop {
   0% {
     transform: translateX(0);
   }
