@@ -9,12 +9,11 @@
 
 /*light*/
 :root {
-  --navigator: #9464fa;
-  --secondary-color: #d8e3e7;
-  --main-color: #ffffff;
-  --nav-text-color: #040404;
-  --text-color: #ffffff;
-  --hover: rgb(110, 79, 182);
+  --navigator: #b2d8b2; /* Pastelowy zielony */
+  --secondary-color: #d8e2dc; /* Subtelny różowo-beżowy */
+  --main-color: #f8edeb; /* Jasny kremowy */
+  --nav-text-color: #333333; /* Ciemnoszary dla lepszej czytelności */
+  --text-color: #444444; /* Przygaszony szary zamiast bieli */
 }
 /*kolorystyka bordo
 :root {
@@ -97,30 +96,22 @@ body {
 .banner-images img {
   width: auto;
   height: 200px;
-  border: 5px solid transparent;
-  border-color: var(--navigator);
-  border-radius: 20px;
-  padding: 5px;
-  margin: 10px;
 }
-.banner .scroll {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  width: max-content;
-  animation: loop 15s linear infinite;
-}
-
-@keyframes loop {
+@keyframes scroll-banner {
   0% {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-990px);
+    transform: translateX(-100%);
   }
 }
 .banner {
   width: 100%;
+  height: 200px; /*
+  margin-top: 20px;
+  margin-left: 2.5%;
+  margin-right: 2.5%;*/
+  font-family: Montserrat;
   position: relative;
   overflow: hidden;
   white-space: nowrap;
@@ -130,19 +121,12 @@ body {
 
 /* Sekcje */
 .section {
-  width: 700px;
-  background-color: var(--secondary-color);
-  margin: auto;
-  padding: 10px;
-  color: var(--nav-text-color);
-  border-radius: 20px;
-  box-shadow: 5px 7px #817f81;
-  margin-top: 30px;
-  margin-bottom: 30px;
   padding: 20px;
-}
-h2 {
-  margin-bottom: 50px;
+  background-color: var(--main-color);
+  margin: 0px 0;
+  /* border-radius: 8px;*/
+  color: var(--nav-text-color);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 /* Galeria zdjęć */
@@ -220,7 +204,7 @@ h2 {
 }
 
 /* Stylowanie dla urządzeń mobilnych */
-@media (max-width: 750px) {
+@media (max-width: 520px) {
   .burger {
     display: flex;
     position: absolute;
@@ -259,31 +243,17 @@ h2 {
 
   /* Banner */
   .banner-images img {
-    width: 100%;
-    height: 200px;
+    width: 100%; /* Obrazy dopasowują się do szerokości ekranu */
+    height: 200px; /* Zachowanie proporcji */
   }
-  .banner .scroll {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    width: fit-content;
-    white-space: nowrap;
-    animation: loop 10s linear infinite;
+  .banner {
+    height: auto; /* Automatyczna wysokość */
   }
 
-  @keyframes loop {
-    0% {
-      transform: translateX(0%);
-    }
-    100% {
-      transform: translateX(-870px);
-    }
-  }
   /* Sekcje */
   .section {
-    padding: 10px;
-    font-size: 16px;
-    width: 70%;
+    padding: 10px; /* Zmniejszone odstępy */
+    font-size: 16px; /* Mniejszy rozmiar czcionki */
   }
 
   /* Galeria */
