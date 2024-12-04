@@ -9,12 +9,12 @@
 
 /*light*/
 :root {
-  --navigator: #9464fa;
-  --secondary-color: #d8e3e7;
+  --navigator: #ff859b;
+  --secondary-color: #ffcece;
   --main-color: #ffffff;
   --nav-text-color: #040404;
   --text-color: #ffffff;
-  --hover: rgb(110, 79, 182);
+  --hover: #ee5772;
 }
 /*kolorystyka bordo
 :root {
@@ -165,7 +165,7 @@ h2 {
   max-height: 150px;
   border-radius: 50%;
   border: 3px solid transparent;
-  border-color: #9464fa;
+  border-color: var(--navigator);
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 .description {
@@ -271,14 +271,6 @@ h2 {
     animation: loop 10s linear infinite;
   }
 
-  @keyframes loop {
-    0% {
-      transform: translateX(0%);
-    }
-    100% {
-      transform: translateX(-870px);
-    }
-  }
   /* Sekcje */
   .section {
     padding: 10px;
