@@ -232,6 +232,7 @@ h2 {
   flex: 1 1 calc(33% - 20px);
   background-color: var(--secondary-color);
   padding: 10px;
+  display: none;
   border-radius: 5px;
   width: 47%;
   color: var(--nav-text-color);
@@ -246,6 +247,11 @@ h2 {
   padding: 10px;
   border-radius: 5px;
   width: 100%;
+}
+
+.harm:hover {
+  background-color: var(--hover);
+  box-shadow: 2px 5px #817f81;
 }
 
 /* Stopka */

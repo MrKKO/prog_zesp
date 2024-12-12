@@ -148,55 +148,59 @@
     <section id="section3" class="section">
       <h2>Harmonogram prac</h2>
       <div class="tiles">
-        <div class="harm">
+        <div class="harm" month="Listopad">
           <h3>Listopad</h3>
           <p>Cele: Poznanie opiekuna. Ustalenie tematyki projektu. Nauka podstawowych technologii.</p>
         </div>
-        <div class="tile">
+        <div class="tile" id="Listopad">
           <p>2024-11-05</p>
           <p>Spotkanie zapoznawcze</p>
         </div>
-        <div class="tile">
+        <div class="tile" id="Listopad">
           <p>2024-11-13</p>
           <p>Omawianie narzędzi do organizacji pracy</p>
         </div>
-        <div class="tile">
+        <div class="tile" id="Listopad">
           <p>2024-11-18</p>
           <p>Organiazacja pracy na ten tydzień</p>
         </div>
-        <div class="tile">
+        <div class="tile" id="Listopad">
           <p>2024-11-27</p>
           <p>Spotkanie stacjnarne omówienie koncepcji na aplikacje</p>
         </div>
-        <div class="harm">
+        <div class="harm" month="Grudzien">
           <h3>Grudzień</h3>
           <p>Cele: CI/CD. Wybór bazy danych. Stworzenie podstawowych funkcji wyświetlania, autentyfikacji, autoryzacji oraz
             tworzenia profilu użytkownika</p>
         </div>
-        <div class="tile">
+        <div class="tile" id="Grudzien">
+          <p>2024-12-02</p>
+          <p>Spotkanie ze schroniskiem</p>
+        </div>
+        <div class="tile" id="Grudzien">
           <p>2024-12-04</p>
           <p>Poznanie technik pisania testów jednostowych i E2E</p>
         </div>
-        <div class="harm">
+        <div class="harm" month="Styczen">
           <h3>Styczeń</h3>
           <p>Cele: Stworzenie funkcji dodawania zwierząt oraz obsługa ich profili. </p>
         </div>
-        <div class="harm">
+        <div class="harm" month="Luty">
           <h3>Luty</h3>
           <p>Cele: Zaimplementowanie algorytmów dopasowujących zwierzęta. Stworzenie funkcji dostępnych po dopasowaniu
             zwierzęcia.
              </p>
         </div>
-        <div class="harm">
+        <div class="harm" month="Marzec">
           <h3>Marzec</h3>
           <p>Cele: Stworzenie poprawnego wyświetlania i obsługa reszty funkcji w aplikacji z poziomu konta schroniska.</p>
         </div>
-        <div class="harm">
+        <div class="harm" month="Kwicien">
           <h3>Kwiecień</h3>
           <p>Cele: Stworzenie możliwości dodawania próśb o domy wakacyjne przez użytkowników. Poprawki.
           </p>
         </div>
-        <div class="harm">
+        <div class="harm" month="Maj">
           <h3>Maj</h3>
           <p>Cele: Kolejne poprawki oraz prezentacja projektu.</p>
         </div>
@@ -212,7 +216,7 @@
       <div class="footer-content"> 
         <div class="footer-section-about"> 
           <h2>O nas</h2> 
-          <p>Jesteśmy zespołem nr 9, naszym celem na ten projekt jest pomoc naszym puchatym przyjaciołom </p> 
+          <p>Jesteśmy zespołem nr 9, daj łapke w prawo </p> 
         </div> 
         <div class="footer-section-links"> 
           <h2>Linki</h2>
@@ -239,6 +243,28 @@
         navbarMenu.classList.toggle('active'); // Pokazuje lub ukrywa menu
         burger.classList.toggle('toggle');    // Dodaje animację do burgera
       });
+
+      document.addEventListener('DOMContentLoaded', () => {
+        // Pobieramy wszystkie elementy z klasą "harm"
+        const harms = document.querySelectorAll('.harm');
+
+        harms.forEach(harm => {
+            harm.addEventListener('click', () => {
+                // Pobierz id powiązanego elementu tile
+                const month = harm.getAttribute("month");
+                const tiles = document.querySelectorAll('.tile[id='+month+']');
+                
+                // Przełącz widoczność elementu tile
+                tiles.forEach(tile =>{if (tile.style.display === 'none' || tile.style.display === '') {
+                    tile.style.display = 'block';
+                } else {
+                    tile.style.display = 'none';
+                }}
+              );
+            });
+        });
+    });
+
     </script>
   </body>
 </html>
