@@ -1,41 +1,11 @@
-/*kolorystyka zielony
 :root {
-  --navigator: #12383f;
-  --secondary-color: #88d7b7;
-  --main-color: #ccdac9;
-  --nav-text-color: #000000;
-  --text-color: #ffffff;
-  --hover: #1f8496;
+  --navigator: #f4a261;
+  --secondary-color: #ffe8dc;
+  --main-color: #ffe8dc;
+  --nav-text-color: #333;
+  --text-color: #fff;
+  --hover: #ce8455;
 }
-
-/*light*/
-:root {
-  --navigator: #ff859b;
-  --secondary-color: #ffffff;
-  --main-color: #fadcdc;
-  --nav-text-color: #5d5655;
-  --text-color: #ffffff;
-  --hover: #ee5772;
-}
-
-/*kolorystyka z
-:root {
-  --navigator: #9464fa;
-  --secondary-color: #d8e3e7;
-  --main-color: #ffffff;
-  --nav-text-color: #040404;
-  --text-color: #ffffff;
-  --hover: rgb(110, 79, 182);
-}
-
-/*kolorystyka kamili
-:root {
-  --navigator: #1b7572;
-  --secondary-color: #7dafa4;
-  --main-color: #f2dcf1;
-  --nav-text-color: #124235;
-  --text-color: #ffffff;
-} /**/
 
 /* Podstawowe style */
 body {
@@ -210,11 +180,39 @@ h2 {
   flex: 1;
   color: var(--text-color);
   float: left;
-  transition: background-color 0.6s ease;
+  transition: background-color 0.6s ease, height 1s ease;
 }
 .description:hover {
   background-color: var(--hover);
+  color: #fff;
   box-shadow: 2px 5px #817f81;
+}
+
+.description span {
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.description span.hovered {
+  font-size: 15px;
+  display: none;
+  opacity: 0;
+  transform: translateY(100%);
+}
+.description span.default {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.description:hover span.hovered {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.description:hover span.default {
+  display: none;
+  opacity: 0;
+  transform: translateY(-100%);
 }
 
 .description p:first-child {
@@ -230,7 +228,7 @@ h2 {
 }
 .tile {
   flex: 1 1 calc(33% - 20px);
-  background-color: var(--secondary-color);
+  background-color: var(--text-color);
   padding: 10px;
   display: none;
   border-radius: 5px;
@@ -251,6 +249,7 @@ h2 {
 
 .harm:hover {
   background-color: var(--hover);
+  color: #fff;
   box-shadow: 2px 5px #817f81;
 }
 
@@ -426,6 +425,12 @@ h2 {
   }
   .profile.reverse {
     float: column;
+  }
+  .description span.hovered {
+    font-size: 13px;
+    display: none;
+    opacity: 0;
+    transform: translateY(100%);
   }
   .profile-image {
     order: -1;
