@@ -9,7 +9,7 @@
 
 /* Podstawowe style */
 body {
-  font-family: New Century Schoolbook, TeX Gyre Schola, serif;
+  font-family: "Segoe UI", sans-serif;
   font-size: 17px;
   line-height: 23px;
   margin: 0;
@@ -17,6 +17,17 @@ body {
   color: #5d5655;
   background-color: var(--main-color);
 }
+
+body {
+  background-image: url("background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  margin: 0;
+  padding: 0;
+}
+
 .navbar img {
   height: 70px;
   top: 5px;
@@ -62,6 +73,10 @@ body {
   height: 3px;
   background-color: var(--text-color);
   transition: 0.6s;
+}
+
+h2 {
+  text-align: center;
 }
 
 .navbar li {
@@ -145,8 +160,19 @@ body {
   margin-bottom: 30px;
   padding: 20px;
 }
+
+#section1 {
+  background-color: var(--navigator);
+  color: #fff;
+  border-radius: 20px;
+}
+
 h2 {
   margin-bottom: 50px;
+}
+
+footer h2 {
+  text-align: left;
 }
 
 /* Galeria zdjęć */
@@ -278,7 +304,7 @@ h2 {
   margin: 0 auto;
 }
 .fancy-footer {
-  background-color: #333;
+  background-color: var(--navigator);
   color: #fff;
   padding: 20px 0;
   position: relative;
@@ -318,14 +344,14 @@ h2 {
 }
 
 .footer-section-links a {
-  color: #f9a825;
+  color: var(--nav-text-color);
   text-decoration: none;
 }
 
 .footer-bottom {
   text-align: center;
   padding: 10px 0;
-  border-top: 1px solid #444;
+  border-top: 1px solid var(--hover);
   margin-top: 20px;
 }
 
