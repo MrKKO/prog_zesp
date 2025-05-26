@@ -366,13 +366,7 @@ footer h2 {
     width: 70%;
     font-size: 18px;
   }
-  .banner{
-    display: none;
-  }
-
-  #phone-banner{
-    display: block;
-  }
+  
 
   .navbar ul {
     list-style: none;
@@ -518,5 +512,13 @@ footer h2 {
   }
   .footer-section-contact {
     display: none;
+  }
+
+  .banner{
+    display: none;
+  }
+
+  #phone-banner{
+    display: block;
   }
 }
