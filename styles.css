@@ -28,6 +28,8 @@ body {
   padding: 0;
 }
 
+
+
 .navbar img {
   height: 70px;
   top: 5px;
@@ -144,6 +146,10 @@ h2 {
   overflow: hidden;
   white-space: nowrap;
   color: #fff;
+}
+
+#phone-banner{
+  display: none;
 }
 
 /* Sekcje */
@@ -360,6 +366,14 @@ footer h2 {
     width: 70%;
     font-size: 18px;
   }
+  .banner{
+    display: none;
+  }
+
+  #phone-banner{
+    display: block;
+  }
+
   .navbar ul {
     list-style: none;
     display: flex;
